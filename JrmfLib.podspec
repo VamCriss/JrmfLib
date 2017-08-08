@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 
 
   s.name         = "JrmfLib"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "some sources of jrmf360"
   s.homepage     = "http://weibo.com/vamCriss"
   s.license      = 'MIT'
