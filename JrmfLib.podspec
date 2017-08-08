@@ -10,18 +10,18 @@ Pod::Spec.new do |s|
 
 
   s.name         = "JrmfLib"
-  s.version      = "1.0.1"
+  s.version      = "1.0.0"
   s.summary      = "some sources of jrmf360"
-  s.homepage     = "https://github.com/VamCriss/JrmfStandardDemo.git"
+  s.homepage     = "http://weibo.com/vamCriss"
   s.license      = 'MIT'
   s.author       = { "criss" => "ericluo0114@hotmail.com" }
   s.platform     = :ios, "8.0"
-  s.source       = { :git => "https://github.com/VamCriss/JrmfStandardDemo.git", :tag => s.version }
+  s.source       = { :git => "https://github.com/VamCriss/JrmfLib.git", :tag => s.version }
   s.resource     = 'jrmfLib/*.{bundle,cer,framework}'
   s.requires_arc = true
 
-  s.subspec 'AlipaySDK' do |ss|
-    ss.resource     = 'jrmfLib/AlipaySDK/**'
+  s.subspec 'AlipayLib' do |ss|
+    ss.resource     = 'jrmfLib/AlipayLib/**'
     ss.frameworks = 'SystemConfiguration', 'CoreGraphics', 'QuartzCore', 'CoreText', 'CoreGraphics', 'UIKit', 'Foundation', 'CFNetwork', 'CoreMotion'
     ss.library = 'z', 'c++'
   end
