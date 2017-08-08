@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'WeChatSDK' do |ss|
     ss.frameworks = 'AVFoundation', 'Security', 'SystemConfiguration', 'CoreTelephony', 'CFNetwork'
-    ss.library = 'sqlite3', 'c++', 'z'
+    ss.library = 'sqlite3.0', 'stdc++', 'z.1.2.5'
 
     ss.subspec 'WXSDK' do |sss|
        sss.vendored_libraries = 'jrmfLib/WeChatSDK/WXSDK/libWeChatSDK.a'
@@ -37,9 +37,8 @@ Pod::Spec.new do |s|
     end
 
     ss.subspec 'SPaySDK' do |sss|
-      sss.vendored_libraries = 'jrmfLib/WeChatSDK/SPaySDK/libSPaySDK.a'
-      sss.resource     = 'jrmfLib/WeChatSDK/SPaySDK/SPaySDKResource.bundle'
-      sss.source_files = 'jrmfLib/WeChatSDK/SPaySDK/*.h'
+      sss.frameworks = 'Foundation', 'UIKit', 'CoreMotion', 'CoreTelephony', 'SystemConfiguration', 'CoreGraphics'
+      sss.source_files = 'jrmfLib/WeChatSDK/SPaySDK/*'
     end
   end
 
