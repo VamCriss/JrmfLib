@@ -23,13 +23,13 @@ Pod::Spec.new do |s|
   s.subspec 'AlipayLib' do |ss|
     ss.resource     = 'jrmfLib/AlipayLib/**'
     ss.frameworks = 'SystemConfiguration', 'CoreGraphics', 'QuartzCore', 'CoreText', 'CoreGraphics', 'UIKit', 'Foundation', 'CFNetwork', 'CoreMotion'
-    ss.library = 'z', 'c++'
+    ss.libraries = 'z', 'c++'
   end
 
 
   s.subspec 'WeChatSDK' do |ss|
     ss.frameworks = 'AVFoundation', 'Security', 'SystemConfiguration', 'CoreTelephony', 'CFNetwork'
-    ss.library = 'sqlite3.0', 'stdc++', 'z.1.2.5'
+    ss.libraries = 'sqlite3.0', 'stdc++', 'z.1.2.5'
 
     ss.subspec 'WXSDK' do |sss|
        sss.vendored_libraries = 'jrmfLib/WeChatSDK/WXSDK/libWeChatSDK.a'
