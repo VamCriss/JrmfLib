@@ -19,6 +19,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/VamCriss/JrmfLib.git", :tag => s.version }
   s.resource     = 'jrmfLib/*.{bundle,cer,framework}'
   s.requires_arc = true
+  s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
 
   s.subspec 'AlipayLib' do |ss|
     ss.resource     = 'jrmfLib/AlipayLib/**'
