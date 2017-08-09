@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'AlipayLib' do |ss|
     ss.resource     = 'jrmfLib/AlipayLib/AlipaySDK.bundle'
-    s.vendored_frameworks = 'jrmfLib/AlipaySDK.framework'
+    s.vendored_frameworks = 'jrmfLib/AlipayLib/AlipaySDK.framework'
     ss.frameworks = 'SystemConfiguration', 'CoreGraphics', 'QuartzCore', 'CoreText', 'CoreGraphics', 'UIKit', 'Foundation', 'CFNetwork', 'CoreMotion'
     ss.libraries = 'z', 'c++'
   end
@@ -42,7 +42,7 @@ Pod::Spec.new do |s|
     ss.subspec 'SPaySDK' do |sss|
       sss.frameworks = 'Foundation', 'UIKit', 'CoreMotion', 'CoreTelephony', 'SystemConfiguration', 'CoreGraphics'
       sss.source_files = 'jrmfLib/WeChatSDK/SPaySDK/*.h'
-      sss.vendored_libraries = 'jrmfLib/WeChatSDK/WXSDK/libSPaySDK.a'
+      sss.vendored_libraries = 'jrmfLib/WeChatSDK/SPaySDK/libSPaySDK.a'
       sss.resource = 'jrmfLib/WeChatSDK/SPaySDK/SPaySDKResource.bundle'
     end
   end
