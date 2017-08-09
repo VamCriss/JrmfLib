@@ -41,8 +41,8 @@ Pod::Spec.new do |s|
 
     ss.subspec 'SPaySDK' do |sss|
       sss.frameworks = 'Foundation', 'UIKit', 'CoreMotion', 'CoreTelephony', 'SystemConfiguration', 'CoreGraphics'
-      sss.source_files = 'jrmfLib/WeChatSDK/SPaySDK/*.h'
-      sss.vendored_libraries = 'jrmfLib/WeChatSDK/SPaySDK/libSPaySDK.a'
+      sss.source_files = 'jrmfLib/WeChatSDK/SPaySDK/*'
+#      sss.vendored_libraries = 'jrmfLib/WeChatSDK/SPaySDK/libSPaySDK.a'
       sss.resource = 'jrmfLib/WeChatSDK/SPaySDK/SPaySDKResource.bundle'
     end
   end
