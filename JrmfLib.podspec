@@ -37,14 +37,12 @@ Pod::Spec.new do |s|
     ss.subspec 'WXSDK' do |sss|
        sss.vendored_libraries = 'jrmfLib/WeChatSDK/WXSDK/libWeChatSDK.a'
        sss.source_files = 'jrmfLib/WeChatSDK/WXSDK/*.h'
-       sss.public_header_files = = 'jrmfLib/WeChatSDK/WXSDK/WXApi.h'
     end
 
     ss.subspec 'SPaySDK' do |sss|
       sss.frameworks = 'Foundation', 'UIKit', 'CoreMotion', 'CoreTelephony', 'SystemConfiguration', 'CoreGraphics'
       sss.source_files = 'jrmfLib/WeChatSDK/SPaySDK/*.h'
       sss.vendored_libraries = 'jrmfLib/WeChatSDK/WXSDK/libSPaySDK.a'
-      sss.public_header_files = = 'jrmfLib/WeChatSDK/SPaySDK/SPayClient.h'
       sss.resource = 'jrmfLib/WeChatSDK/SPaySDK/SPaySDKResource.bundle'
     end
   end
