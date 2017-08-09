@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'AlipayLib' do |ss|
     ss.resource     = 'jrmfLib/AlipayLib/AlipaySDK.bundle'
-    s.vendored_frameworks = 'jrmfLib/AlipayLib/AlipaySDK.framework'
+    ss.vendored_frameworks = 'jrmfLib/AlipayLib/AlipaySDK.framework'
     ss.frameworks = 'SystemConfiguration', 'CoreGraphics', 'QuartzCore', 'CoreText', 'CoreGraphics', 'UIKit', 'Foundation', 'CFNetwork', 'CoreMotion'
     ss.libraries = 'z', 'c++'
   end
