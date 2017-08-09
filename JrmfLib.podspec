@@ -10,19 +10,21 @@ Pod::Spec.new do |s|
 
 
   s.name         = "JrmfLib"
-  s.version      = "1.0.2"
+  s.version      = "1.0.3"
   s.summary      = "some sources of jrmf360"
   s.homepage     = "http://weibo.com/vamCriss"
   s.license      = 'MIT'
   s.author       = { "criss" => "ericluo0114@hotmail.com" }
   s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/VamCriss/JrmfLib.git", :tag => s.version }
-  s.resource     = 'jrmfLib/*.{bundle,cer,framework}'
+  s.resource     = 'jrmfLib/*.{bundle,cer}'
+  s.vendored_frameworks = 'jrmfLib/*.framework'
   s.requires_arc = true
   s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
 
   s.subspec 'AlipayLib' do |ss|
-    ss.resource     = 'jrmfLib/AlipayLib/**'
+    ss.resource     = 'jrmfLib/AlipayLib/AlipaySDK.bundle'
+    s.vendored_frameworks = 'jrmfLib/AlipaySDK.framework'
     ss.frameworks = 'SystemConfiguration', 'CoreGraphics', 'QuartzCore', 'CoreText', 'CoreGraphics', 'UIKit', 'Foundation', 'CFNetwork', 'CoreMotion'
     ss.libraries = 'z', 'c++'
   end
@@ -35,11 +37,14 @@ Pod::Spec.new do |s|
     ss.subspec 'WXSDK' do |sss|
        sss.vendored_libraries = 'jrmfLib/WeChatSDK/WXSDK/libWeChatSDK.a'
        sss.source_files = 'jrmfLib/WeChatSDK/WXSDK/*.h'
+       sss.public_header_files = = 'jrmfLib/WeChatSDK/WXSDK/WXApi.h'
     end
 
     ss.subspec 'SPaySDK' do |sss|
       sss.frameworks = 'Foundation', 'UIKit', 'CoreMotion', 'CoreTelephony', 'SystemConfiguration', 'CoreGraphics'
-      sss.source_files = 'jrmfLib/WeChatSDK/SPaySDK/*'
+      sss.source_files = 'jrmfLib/WeChatSDK/SPaySDK/*.h'
+      sss.vendored_libraries = 'jrmfLib/WeChatSDK/WXSDK/libSPaySDK.a'
+      sss.public_header_files = = 'jrmfLib/WeChatSDK/SPaySDK/SPayClient.h'
       sss.resource = 'jrmfLib/WeChatSDK/SPaySDK/SPaySDKResource.bundle'
     end
   end
